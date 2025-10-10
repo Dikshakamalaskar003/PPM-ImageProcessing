@@ -1,0 +1,2 @@
+with open("blackboard_dot_p3,ppm","r") as fp:
+
