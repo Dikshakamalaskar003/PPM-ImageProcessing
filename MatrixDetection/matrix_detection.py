@@ -62,7 +62,7 @@ if row_line:
 print("Total Rows :", merged_lines_row)
 print("Total merged lines:", len(merged_lines_row))
 
-#---colunm part---
+#colunm part
 #print continuous 1's line in list (vertical)
 
 col_line=[]
@@ -176,7 +176,7 @@ with open("grid2.ppm", "w") as f:
 #marking corner with colour
 
 
-# --- Step 4: Build color image again for marking ---
+#Build color image again for marking
 img = []
 k = 0
 for i in range(height):
@@ -188,7 +188,7 @@ for i in range(height):
     img.append(row)
 
 
-# --- Step 5: Function to draw yellow dot (visible corner mark) ---
+#Function to draw yellow dot (visible corner mark)
 def draw_dot(img, x, y, radius=4, color=(255, 255, 0)):
     
     for yy in range(y-radius,y+radius+1):
@@ -204,7 +204,7 @@ for (x, y) in corner:
 print("Marked all corners on image")
 
 
-# --- Step 7: Write the new PPM image ---
+#Write the new PPM image
 with open("matrix2_marked.ppm", "w") as f:
     f.write("P3\n")
     f.write(f"{width} {height}\n255\n")
